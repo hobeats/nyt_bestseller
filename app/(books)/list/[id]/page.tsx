@@ -15,16 +15,16 @@ async function getDetail(id: string) {
   return res.json();
 }
 
-export async function generateMetadata({ params: { id } }: IParams) : Promise<Metadata>{
-  const detail = await getDetail(id);
+export async function generateMetadata({ params }: IParams) : Promise<Metadata>{
+  const detail = await getDetail(params.id);
 
   return {
     title: `${detail?.results?.list_name}`,
   };
 }
 
-export default async function Detail({ params: { id } }: IParams) {
-  const detail = await getDetail(id);
+export default async function Detail({ params }: IParams) {
+  const detail = await getDetail(params.id);
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>{detail?.results?.list_name} Books</h1>
