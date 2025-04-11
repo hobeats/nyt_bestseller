@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Metadata } from "next";
 import styles from "/app/styles/list.module.css";
 import "/app/styles/global.css";
 
@@ -14,7 +15,7 @@ async function getDetail(id: string) {
   return res.json();
 }
 
-export async function generateMetadata({ params: { id } }: IParams) {
+export async function generateMetadata({ params: { id } }: IParams) : Promise<Metadata>{
   const detail = await getDetail(id);
 
   return {
