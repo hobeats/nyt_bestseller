@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lists {
+    padding:10px;
+}
+
+.list{
+    list-style-type: none;
+}
+
+.link {
+    text-decoration: none;
+    color:black;
+    cursor: pointer;
+}
+
+.link:hover{
+    color:blue;
+}
+
+.title{
+    text-align: center;
+    padding: 0;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:5vh;
+    color:black;
+}

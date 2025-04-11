@@ -1,0 +1,61 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./app/styles/list.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+.list_container__15fpK{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.list_lists__7OtDa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    max-width: 1000px; 
+    width: 100%;      
+    list-style: none;
+}
+
+.list_list__mCApn{
+    list-style-type: none;
+}
+
+.list_bookContainer__WSDns{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:200px;
+    height:400px;
+    padding: 12px;
+    margin: 10px;
+    border: 2px double;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    box-shadow: inset -1px -1px 0 #000000, inset 1px 1px 0 #dfdfdf;
+}
+
+.list_img__UO9kd{
+    width:200px;
+    height:250px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.list_link__kX_vj{
+    position: absolute;
+    bottom: 10px;
+    background-color: #dfdfdf;
+    padding:5px 8px;
+    border: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    box-shadow: inset -1px -1px 0 #000000, inset 1px 1px 0 #dfdfdf;
+    color:black;
+    margin-top:8px;
+    cursor: pointer;
+}
+
+/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./app/styles/global.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************/
+body{
+    background-color: rgb(22, 190, 190);
+}
