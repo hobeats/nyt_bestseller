@@ -2,9 +2,9 @@ import Link from "next/link";
 import styles from "/app/styles/list.module.css";
 import "/app/styles/global.css";
 
-interface IParams {
-  params: { id: string }
-}
+type IParams = Promise<{
+  id: string;
+}>;
 
 async function getDetail(id: string) {
   const res = await fetch(
@@ -13,16 +13,17 @@ async function getDetail(id: string) {
   return res.json();
 }
 
-export async function generateMetadata({ params: { id } }: IParams){
-  const detail = await getDetail(id);
-
+export async function generateMetadata(props: { params: IParams }) {
+  const params = await props.params;
+  const id = params.id;
   return {
-    title: `${detail?.results?.list_name}`,
+    title: id,
   };
 }
-
-export default async function Detail({ params: { id } }: IParams) {
-  const detail = await getDetail(id);
+export default async function Detail(props: { params: IParams }) {
+  const params = await props.params;
+  const name = params.id;
+  const detail = await getDetail(name);
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>{detail?.results?.list_name} Books</h1>
