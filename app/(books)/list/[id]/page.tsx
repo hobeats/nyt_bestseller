@@ -2,6 +2,11 @@ import Link from "next/link";
 import styles from "/app/styles/list.module.css";
 import "/app/styles/global.css";
 
+
+interface IParams {
+  params: { id: string }
+}
+
 async function getDetail(id: string) {
   const res = await fetch(
     `https://books-api.nomadcoders.workers.dev/list?name=${id}`
@@ -9,11 +14,16 @@ async function getDetail(id: string) {
   return res.json();
 }
 
-export default async function Detail({
-  params: { id },
-}: {
-  params: { id: string };
-}) {
+export async function generateMetadata({ params: { id } }: IParams) {
+  const detail = await getDetail(id);
+
+  return {
+    title: `${detail?.results?.list_name}`,
+  };
+}
+
+
+export default async function Detail({ params: { id } }: IParams) {
   const detail = await getDetail(id);
   return (
     <div className={styles.container}>

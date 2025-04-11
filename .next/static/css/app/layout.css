@@ -32,6 +32,7 @@
 .styles_nav__FWv9j{
     display: flex;
     align-items: center;
+    gap: 100px;
     justify-content: center;
     height:5vh;
     color:black;
