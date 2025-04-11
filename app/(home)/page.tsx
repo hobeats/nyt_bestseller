@@ -20,7 +20,7 @@ export default async function HomePage() {
         <ul className={styles.lists}>
           {list?.results?.map((result) => (
             <li key={result.list_name} className={styles.list}>
-              <Link href={`/list/${result.list_name_encoded}`} className={styles.link}>
+              <Link prefetch href={`/list/${result.list_name_encoded}`} className={styles.link}>
                 📚 {result.list_name}
               </Link>
             </li>
