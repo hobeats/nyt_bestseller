@@ -22,7 +22,6 @@ export async function generateMetadata({ params: { id } }: IParams) {
   };
 }
 
-
 export default async function Detail({ params: { id } }: IParams) {
   const detail = await getDetail(id);
   return (
