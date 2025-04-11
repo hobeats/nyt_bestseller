@@ -22,15 +22,31 @@
       "static/css/app/(home)/page.css",
       "static/chunks/app/(home)/page.js"
     ],
+    "/(books)/list/[id]/error": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(books)/list/[id]/error.js"
+    ],
+    "/(books)/list/[id]/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(books)/list/[id]/loading.js"
+    ],
     "/(books)/list/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/(books)/list/[id]/page.css",
       "static/chunks/app/(books)/list/[id]/page.js"
     ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
+    ],
     "/about-us/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
+      "static/css/app/about-us/page.css",
       "static/chunks/app/about-us/page.js"
     ]
   }

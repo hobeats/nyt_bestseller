@@ -25,7 +25,7 @@
     align-items: center;
     justify-content: center;
     width:200px;
-    height:400px;
+    height:420px;
     padding: 12px;
     margin: 10px;
     border: 2px double;
@@ -34,10 +34,23 @@
 }
 
 .list_img__UO9kd{
+    position:absolute;
+    top:10px;
     width:200px;
     height:250px;
     object-fit: contain;
     margin-bottom: 10px;
+}
+
+.list_info__KnV5f{
+    position: absolute;
+    top:280px;
+    margin:10px;
+    text-align: center;
+}
+.list_booktitle__AsOtu{
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .list_link__kX_vj{
@@ -53,9 +66,19 @@
     cursor: pointer;
 }
 
+.list_link__kX_vj:active {
+    border-color: #808080 #ffffff #ffffff #808080;
+    box-shadow: inset 1px 1px 0 #000000, inset -1px -1px 0 #dfdfdf;
+    transform: translateY(1px);
+}
+
+.list_link__kX_vj:hover{
+    color:blue
+}
 /*!*******************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./app/styles/global.css ***!
   \*******************************************************************************************************************************************************************************************************************************************************************/
 body{
     background-color: rgb(22, 190, 190);
 }
+

@@ -17,7 +17,7 @@ export default async function Detail({
   const detail = await getDetail(id);
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>{detail?.results?.list_name}</h1>
+      <h1 className={styles.title}>{detail?.results?.list_name} Books</h1>
       <ul className={styles.lists}>
         {detail?.results?.books?.map((book) => (
           <li key={book.primary_isbn13} className={styles.list}>
@@ -30,9 +30,13 @@ export default async function Detail({
                 }
                 className={styles.img}
               />
-              <div>{book.title}</div>
-              <div>{book.author}</div>
-              <Link href={book.buy_links[0].url}  className={styles.link}>BUY NOW</Link>
+              <div className={styles.info} >
+                <div className={styles.booktitle}>{book.title}</div>
+                <div>{book.author}</div>
+              </div>
+              <Link href={book.buy_links[0].url} className={styles.link}>
+                BUY NOW
+              </Link>
             </div>
           </li>
         ))}

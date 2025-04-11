@@ -22,7 +22,7 @@
     align-items: center;
     justify-content: center;
     width:200px;
-    height:400px;
+    height:420px;
     padding: 12px;
     margin: 10px;
     border: 2px double;
@@ -31,10 +31,23 @@
 }
 
 .img{
+    position:absolute;
+    top:10px;
     width:200px;
     height:250px;
     object-fit: contain;
     margin-bottom: 10px;
+}
+
+.info{
+    position: absolute;
+    top:280px;
+    margin:10px;
+    text-align: center;
+}
+.booktitle{
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .link{
@@ -48,4 +61,14 @@
     color:black;
     margin-top:8px;
     cursor: pointer;
+}
+
+.link:active {
+    border-color: #808080 #ffffff #ffffff #808080;
+    box-shadow: inset 1px 1px 0 #000000, inset -1px -1px 0 #dfdfdf;
+    transform: translateY(1px);
+}
+
+.link:hover{
+    color:blue
 }
